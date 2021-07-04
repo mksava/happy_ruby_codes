@@ -1,0 +1,19 @@
+default: &default
+  app_name: "Hello Yaml"
+  systems:
+    bool_v: true
+    number_v: 1
+    float_v: 1.2
+    erb_string: <%= "neko".upcase %> #=> NEKO
+    animals:
+      - Dog
+      - Cat
+      - Bird
+    stores:
+      - name: "A store"
+        address: "A-b-112"
+      - name: "B store"
+        address: "Sunmart-N-11"
+development:
+  <<: *default
+  app_name: "Develop YAML"
