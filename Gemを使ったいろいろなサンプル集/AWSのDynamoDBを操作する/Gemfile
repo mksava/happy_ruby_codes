@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+# 公式が出している s3 の sdk gem はとてもとても使いづらいので、
+# ActiveRecordのように使用できる dynamoid を利用する。
+gem "dynamoid"
